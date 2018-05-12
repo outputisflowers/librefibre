@@ -210,6 +210,8 @@ nav ul li{
     opacity:0.2;
 
     border-right:4vw solid transparent;
+
+    padding-left: 15vw;
 }
 
 /* #blck-vert-line{
