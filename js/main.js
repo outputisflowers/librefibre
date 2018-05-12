@@ -1,4 +1,7 @@
-document.addEventListener('scroll', function graphicAppear(e){
+document.addEventListener('scroll', graphicAppear(e))
+document.addEventListener('touchmove', graphicAppear(e))
+
+function graphicAppear(e){
     var divHeight = 0;
 
 
@@ -36,5 +39,4 @@ document.addEventListener('scroll', function graphicAppear(e){
     console.log(divHeight);
 
     e.preventDefault();
-
-})
+}
