@@ -1,5 +1,5 @@
-document.addEventListener('scroll', graphicAppear);
-document.addEventListener('touchmove', graphicAppear);
+window.addEventListener('scroll', graphicAppear);
+window.addEventListener('touchmove', graphicAppear);
 
 function graphicAppear(e){
     var divHeight = 0;
