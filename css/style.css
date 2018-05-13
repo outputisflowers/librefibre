@@ -341,11 +341,75 @@
   }
   
 
+/* STYLE */
 
-/******************** GENERAL ***************************/
-html {
-    overflow-y:scroll;
-  }
+/* TYPOGRAPHY */
+p, h1, h2, h3, a{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #ddd;
+    font-size: calc(60% + 0.5vw);
+}
+
+p, a{
+    font-size: calc(75% + 0.5vw);
+    line-height:1.5;
+}
+
+h1{
+    font-size:calc(250% + 0.5vw);
+    color:#ddd;
+    line-height: 1;
+}
+
+h2{
+    font-size:calc(150% + 0.5vw);
+    margin: 0 0 0.5em 0;
+}
+
+h3{
+    font-size: calc(120% + 0.5vw);
+    margin: 0 0 0.5em 0;
+}
+
+.light-section p{
+    color: #333;
+}
+
+.light-section h3{
+    color: #4fcab9
+    
+}
+
+.dark-section p{
+    color: #ddd;
+}
+
+.dark-section h3{
+    color: #ff8630;
+}
+
+#mission p{
+    font-size: calc(90% + 0.5vw);
+}
+
+#mission h2{
+    color: #ddd;
+}
+
+#mission h2 .blue{
+    color:#4fcab9;
+}
+
+#mission h2 .orng{
+    color:#ff8630;
+}
+
+
+/* GENERAL */
 
 #bg-img{
     position: absolute;
