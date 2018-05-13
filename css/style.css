@@ -343,6 +343,9 @@
 
 
 /******************** GENERAL ***************************/
+html {
+    overflow-y:scroll;
+  }
 
 #bg-img{
     position: absolute;
