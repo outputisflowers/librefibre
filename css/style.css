@@ -127,25 +127,63 @@ h3{
     z-index:-1;
 }
 
+#header-wrapper{
+    height: 10vh;
+    width: 100%;
+
+    z-index: 5;
+    position:fixed;
+    top:0;
+    left:0;
+
+    transform-origin: top;
+    transition: 0.6s ease;
+}
+
 header{
     position:fixed;
     display:grid;
-    grid-template-columns: 40% 20% 40%;
+    grid-template-columns: 2fr 1fr 2fr;
     padding:1vh 0;
     width: 100%;
-    height:11vh;
-    overflow:auto;
+    height:9vh;
+    overflow:hidden;
+    z-index:5;
+    max-height: 50px;
+    transform-origin: top;
+    transition: 0.6s ease;
 }
 
-nav{
-    float:right;
-    position:relative;
+header nav ul li a{
+    color: #333;
+}
+
+#logo {
+    width: 100%;
+    height: 100%;
+
+    background-image: url(../img/lifi-logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+nav ul{
+    height:100%;
+    padding: 2vh 5vw 2vh 0;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 nav ul li{
     display: inline-block;
-    padding: 2vh 0.3vw;
+    line-height: 0;
+    height:100%;
+}
+
+nav ul li a{
     line-height: 1;
+    text-align:center;
 }
 
 #motto{
@@ -187,10 +225,20 @@ nav ul li{
 
 .dark-bg{
     background-color: #333;
+    position:relative;
+    z-index:3;
 }
 
 .light-bg{
     background-color: #ddd;
+    position:relative;
+    z-index:3;
+}
+
+#about-offer, #about-support{
+    border-left: 4vw solid #ddd;
+    position: relative;
+    left: -4vw;
 }
 
 #builders, #specs{
@@ -198,8 +246,9 @@ nav ul li{
 }
 
 
-/* GRAPHIC ELEMENTS */
+/********************* GRAPHIC ELEMENTS *******************/
 
+/************** TOP GRAPHIC  ****************/
 #top-graphic{
     overflow: hidden;
     position: relative;
@@ -210,19 +259,7 @@ nav ul li{
     opacity:0.2;
 
     border-right:4vw solid transparent;
-
-    padding-left: 15vw;
 }
-
-/* #blck-vert-line{
-    height:100%;
-    position:absolute;
-    top:0;
-    left:30%;
-
-    width:13px;
-    background-color: #333;
-} */
 
 #blck-vert-line{
     height:100%;
@@ -305,6 +342,245 @@ nav ul li{
     background-color:#ddd;
 }
 
+
+/******************RIGTH GRAPHIC***************************/
+
+#right-graphic{
+    overflow: show;
+    position: relative;
+
+    line-height:0;
+    font-size:0;
+
+    opacity:0.2;
+}
+
+#blck-vert-line2{
+    height:100%;
+    height:0;
+    position:absolute;
+    top:0;
+    left:30%;
+
+    margin-left:19px;
+    width:13px;
+    background-color: #333;
+}
+
+#blue-vert-line2{
+    height:100%;
+    height:0;
+    position:absolute;
+    top:0;
+    left:30%;
+
+    margin-left:11px;
+    width:8px;
+    background-color: #4fcab9;
+}
+
+#orng-vert-line2{
+    height:100%;
+    height:0;
+    position:absolute;
+    top:calc(30vh + 8px);
+    left:30%;
+
+    margin-left:0px;
+    width:11px;
+    background-color: #ff8630;
+}
+
+#orng-hor-line2{
+    position:absolute;
+    top:30vh;
+    right:0;
+    margin-right:-25vw;
+
+    width: 45%;
+    width: 0;
+    height: 8px;
+
+    background-color:#ff8630;    
+}
+
+#blck-hor-line2{
+    position:absolute;
+    top:calc(30vh + 8px);
+    right:0;
+    margin-right:-25vw;
+
+
+    width: 45%;
+    width: 0;
+    height: 11px;
+
+    background-color:#333;
+}
+
+
+#square3{
+    position:absolute;
+    top: 30vh;
+    left:calc(30% + 11px);
+
+    width: 8px;
+    height: 8px;
+
+    background-color:#ddd;
+}
+
+#square4{
+    position:absolute;
+    top: calc(30vh + 8px);
+    left:calc(30%);
+
+    width: 11px;
+    height: 11px;
+
+    background-color:#ddd;
+}
+
+
+/******************LEFT GRAPHIC************************/
+#left-graphic{
+    overflow: show;
+    position: relative;
+
+    line-height:0;
+    font-size:0;
+
+    opacity:0.2;
+}
+
+#blck-vert-line3{
+    height:100%;
+    height:0;
+    position:absolute;
+    top:0;
+    left:30%;
+
+    width:13px;
+    background-color: #333;
+}
+
+#blue-vert-line3{
+    height:100%;
+    height:0;
+    position:absolute;
+    top:0;
+    left:30%;
+
+    margin-left:13px;
+    width:8px;
+    background-color: #4fcab9;
+}
+
+#orng-vert-line3{
+    height:100%;
+    height:0;
+    position:absolute;
+    top:calc(5vh + 8px);
+    left:30%;
+
+    margin-left:21px;
+    width:11px;
+    background-color: #ff8630;
+}
+
+#blue-hor-line3{
+    position:absolute;
+    top:5vh;
+    left:0;
+    margin-left:-25vw;
+
+    width: 45%;
+    width: 0;
+    height: 8px;
+
+    background-color:#4fcab9;    
+}
+
+#blck-hor-line3{
+    position:absolute;
+    top:calc(5vh + 8px);
+    left:0;
+    margin-left:-25vw;
+
+
+    width: 45%;
+    width: 0;
+    height: 11px;
+
+    background-color:#333;
+}
+
+
+#square5{
+    position:absolute;
+    top: 35vh;
+    left:calc(30% + 13px);
+
+    width: 8px;
+    height: 8px;
+
+    background-color:#ddd;
+}
+
+#square6{
+    position:absolute;
+    top: calc(5vh + 8px);
+    left:calc(30% + 21px);
+
+    width: 11px;
+    height: 11px;
+
+    background-color:#ddd;
+}
+
+#orng-hor-line4{
+    position:absolute;
+    top:35vh;
+    left:calc(30% + 32px);
+
+    width: 45%;
+    width: 0;
+    height: 8px;
+
+    background-color:#ff8630;
+}
+
+#blck-hor-line4{
+    position:absolute;
+    top:calc(35vh + 8px);
+    left:calc(30% + 32px);
+
+    width: 45%;
+    width: 0;
+    height: 11px;
+
+    background-color:#333;
+}
+
+#square7{
+    position:absolute;
+    top: calc(35vh + 8px);
+    left:calc(30% + 21px);
+
+    width: 11px;
+    height: 11px;
+
+    background-color:#ddd;
+}
+
+#right-graphic{
+    grid-row: span 2;
+}
+
+#left-graphic{
+    grid-row: span 2;
+}
+
 /* MEDIA QUERIES */
 
 @media(max-width: 700px){
@@ -334,13 +610,18 @@ nav ul li{
         padding: 10vh 20vw 10vh 20vw;
     }
 
-    #top-graphic{
+    #top-graphic, #left-graphic{
         position:relative;
         left:-30%;
     }
 
-    #blck-hor-line, #orng-hor-line, #square1, #square2{
+    #blck-hor-line, #orng-hor-line, #blck-hor-line2, #blck-hor-line-3, #blck-hor-line4, #orng-hor-line2, #blue-hor-line3, #blck-hor-line3, #orng-hor-line4{
         display:none;
+    }
+
+    #about-offer, #about-support{
+        border-right: 10vw solid #ddd;
+        margin-right: -10vw;
     }
 }
 
