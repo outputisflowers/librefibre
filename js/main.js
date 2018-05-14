@@ -142,13 +142,17 @@ function solidHeader(){
     var missionHeight = document.getElementById('mission').clientHeight;
     var upperPageHeight = mottoHeight + missionHeight;
     var headerWrapper = document.getElementById('header-wrapper').style;
-
+    var navColor = document.getElementById('header').getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
 
     if(scrolled > upperPageHeight/3){
     headerStyle.transform = 'scale(0.9)';
     headerWrapper.transform = 'scaleY(0.8)'; 
     headerWrapper.backgroundColor = '#ddd';
     headerWrapper.shadowBox = 'black'
+
+        for(i=0; i<navColor.length; i++){
+            navColor[i].getElementsByTagName('a')[0].style.color = '#333';
+        };
     };
 
     if(scrolled < upperPageHeight/3){
@@ -156,7 +160,9 @@ function solidHeader(){
         headerStyle.transform = 'scale(1)';
         headerWrapper.backgroundColor = 'transparent';
         headerWrapper.transform = 'scale(1)'
-    }
 
-    
-}
+        for(i=0; i<navColor.length; i++){
+            navColor[i].getElementsByTagName('a')[0].style.color = '#ddd';
+        };
+    };
+};
