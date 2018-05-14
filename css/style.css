@@ -411,6 +411,10 @@ h3{
 
 /* GENERAL */
 
+#mission, #details, #builders, #specs, #contact{
+    transition: 2s ease;
+}
+
 #bg-img{
     position: absolute;
     top:0;
