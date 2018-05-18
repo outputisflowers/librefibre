@@ -505,6 +505,13 @@ nav ul li a{
     padding: 0 30vw 20vh 30vw;
 }
 
+#mission:target:before{
+   content: "";
+   display: block;
+   height: 9vh;
+   margin-top: -9vhpx;
+}
+
 #details{
     display: grid;
     grid-template-columns: 50% 50%;

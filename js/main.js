@@ -79,13 +79,13 @@ function leftGraphicAppear(e){
 
     }else{
         blckVertLine3.style.height = 'calc(' + leftDivHeight + 'px + 10px)';
-        orngVertLine3.style.height = 'calc(' + leftDivHeight + 'px' + ' - ' + '5vh - 8px' + ')';
+        orngVertLine3.style.height = 'calc(' + leftDivHeight + 'px - 5vh - 8px )';
         blueVertLine3.style.height = 'calc(' + leftDivHeight + 'px + 20px)';
     
         blckHorLine3.style.width = 'calc(' + leftDivHeight + 'px'  + ' + 75px + 5vh)';
         blueHorLine3.style.width = 'calc(' + leftDivHeight + 'px' + ' + 75px + 5vh + 15px)';
 
-        blckHorLine4.style.width = 'calc(' + leftDivHeight + 'px' + ' - ' + '75vh)';
+        blckHorLine4.style.width = 'calc(' + leftDivHeight + 'px - 75vh)';
         orngHorLine4.style.width = 'calc(' + leftDivHeight + 'px' + ' - ' + '75vh + 25px)';
     };
 
@@ -166,3 +166,4 @@ function solidHeader(){
         };
     };
 };
+
