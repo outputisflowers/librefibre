@@ -10,6 +10,14 @@ window.addEventListener('touchmove', rightGraphicAppear);
 window.addEventListener('scroll', solidHeader);
 window.addEventListener('touchmove', solidHeader);
 
+var slideMenuAnchor = document.getElementById('slide-menu').querySelectorAll('a');
+slideMenuAnchor[0].addEventListener('click', closeSlideMenu);
+slideMenuAnchor[1].addEventListener('click', closeSlideMenu);
+slideMenuAnchor[2].addEventListener('click', closeSlideMenu);
+slideMenuAnchor[3].addEventListener('click', closeSlideMenu);
+slideMenuAnchor[4].addEventListener('click', closeSlideMenu);
+
+
 function topGraphicAppear(e){
     var topDivHeight = 0;
 
@@ -143,6 +151,7 @@ function solidHeader(){
     var upperPageHeight = mottoHeight + missionHeight;
     var headerWrapper = document.getElementById('header-wrapper').style;
     var navColor = document.getElementById('header').getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+    var hamburgerColor = document.querySelectorAll('path');
 
     if(scrolled > upperPageHeight/3){
     headerStyle.transform = 'scale(0.9)';
@@ -152,6 +161,10 @@ function solidHeader(){
 
         for(i=0; i<navColor.length; i++){
             navColor[i].getElementsByTagName('a')[0].style.color = '#333';
+        };
+
+        for(i=0; i<hamburgerColor.length; i++){
+            hamburgerColor[i].attributes[1].nodeValue = '#333';
         };
     };
 
@@ -164,6 +177,21 @@ function solidHeader(){
         for(i=0; i<navColor.length; i++){
             navColor[i].getElementsByTagName('a')[0].style.color = '#ddd';
         };
+
+        for(i=0; i<hamburgerColor.length; i++){
+            hamburgerColor[i].attributes[1].nodeValue = '#ddd';
+        };
     };
 };
+
+function openSlideMenu(){
+    document.getElementById('slide-menu').style.width = '40vw';
+    document.getElementById('slide-menu').style.padding = '10vh 5vh';
+};
+
+function closeSlideMenu(){
+    document.getElementById('slide-menu').style.width = '0vw';
+    document.getElementById('slide-menu').style.padding = '10vh 0';
+};
+
 
