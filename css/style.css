@@ -694,7 +694,8 @@ footer li{
 
     #top-graphic, #left-graphic{
         position:relative;
-        left:-30%;
+        border: 0;
+        left:-11px;
     }
 
     #blck-hor-line, #orng-hor-line, #blck-hor-line2, #blck-hor-line-3, #blck-hor-line4, #orng-hor-line2, #blue-hor-line3, #blck-hor-line3, #orng-hor-line4{
