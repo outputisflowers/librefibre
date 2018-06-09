@@ -655,14 +655,6 @@ footer li{
     background-color:#ddd;
 }
 
-#mc_embed_signup #mce-success-response{
-    color:#4fcab9;
-}
-
-#mc_embed_signup #mce-error-response{
-    color:#ff8630;
-}
-
 /* MEDIA QUERIES */
 
 @media(max-width: 720px){
@@ -699,7 +691,6 @@ footer li{
     #builders, #specs, #contact{
         padding: 10vh 20vw 10vh 20vw;
     }
-
 
     #top-graphic, #left-graphic{
         position:relative;
