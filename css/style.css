@@ -95,7 +95,7 @@ footer nav{
 
 /****************** GENERAL ********************/
 #page{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #bg-img{
@@ -108,7 +108,6 @@ footer nav{
     background-repeat:no-repeat;
     width:100%;
     height:200vh;
-    z-index:-1;
 }
 
 #header-wrapper{
@@ -144,6 +143,8 @@ header .main-nav ul li a{
 #logo{
     width: 100%;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 #logo img{
@@ -222,11 +223,15 @@ header .main-nav ul li a{
     height:49vh;
     text-align: center;
     padding:51vh 10vw 0vh 10vw;
+    position: relative;
+    z-index:1;
 }
 
 #mission{
     height:auto;
     padding: 8vh 30vw 20vh 30vw;
+    position: relative;
+    z-index:1;
 }
 
 #mission:target:before{
@@ -299,6 +304,8 @@ header .main-nav ul li a{
 footer{
     padding: 7vh 20vw 1vh 20vw;
     width:60vw;
+    overflow: hidden;
+    margin:0;
 } 
 
 #footer-contacts{
