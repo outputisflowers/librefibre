@@ -656,11 +656,11 @@ footer li{
 }
 
 #mc_embed_signup #mce-success-response{
-    color:#4fcab9;
+    color:#4fcab9 !important;
 }
 
 #mc_embed_signup #mce-error-response{
-    color:#ff8630;
+    color:#ff8630 !important;
 }
 
 /* MEDIA QUERIES */
