@@ -680,7 +680,6 @@ footer li{
 
     .mobile-nav{
         display: block;
-	z-index: 100;
     }
 
     #motto{
@@ -733,10 +732,10 @@ footer li{
         grid-template-columns: 0 1fr 1fr 1fr 1fr 1fr 0;
     }
 
-	html, body, #page{
-		overflow-y:scroll;
-		-webkit-overflow-scrolling: touch;
-	}
+    html, body, #page, #mission, #motto, section, #contact{
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
 @media(min-width: 1440px){
