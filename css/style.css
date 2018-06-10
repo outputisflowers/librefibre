@@ -731,6 +731,10 @@ footer li{
         display: grid;
         grid-template-columns: 0 1fr 1fr 1fr 1fr 1fr 0;
     }
+
+	html{
+		overflow-y:scroll;
+	}
 }
 
 @media(min-width: 1440px){
