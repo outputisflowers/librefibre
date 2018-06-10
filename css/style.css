@@ -735,6 +735,8 @@ footer li{
 
 	html, body, #page{
 		overflow-y:scroll;
+		-webkit-overflow-scrolling: touch;
+		overflow-scrolling: touch;
 	}
 }
 
