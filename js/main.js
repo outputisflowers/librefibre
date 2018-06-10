@@ -9,6 +9,8 @@ window.addEventListener('touchmove', rightGraphicAppear);
 
 window.addEventListener('scroll', solidHeader);
 window.addEventListener('touchmove', solidHeader);
+window.addEventListener('mousemove', solidHeader);
+
 
 var slideMenuAnchor = document.getElementById('slide-menu').querySelectorAll('a');
 slideMenuAnchor[0].addEventListener('click', closeSlideMenu);
