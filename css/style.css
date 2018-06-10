@@ -732,7 +732,7 @@ footer li{
         grid-template-columns: 0 1fr 1fr 1fr 1fr 1fr 0;
     }
 
-	html{
+	html, #page{
 		overflow-y:scroll;
 	}
 }
