@@ -108,7 +108,6 @@ footer nav{
     background-repeat:no-repeat;
     width:100%;
     height:200vh;
-    overflow-y:scroll;
     z-index:-1
 }
 
@@ -202,6 +201,7 @@ header .main-nav ul li a{
     right:0;
     z-index: 100;
     transition: ease 0.5s;
+    padding: 10vh 0;
 }
 
 #slide-menu a{
@@ -727,7 +727,6 @@ footer li{
         margin-right: -10vw;
     }
 
-
     footer ul{
         list-style-type: none;
         margin:0;
@@ -735,12 +734,10 @@ footer li{
         display: grid;
         grid-template-columns: 0 1fr 1fr 1fr 1fr 1fr 0;
     }
-
-    /* html, body, #page, #mission, #motto, section, #contact{
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-        touch-action: none;
-    } */
+    
+    #page{
+        overflow-y:scroll;
+    }
 }
 
 @media(min-width: 1440px){
@@ -762,8 +759,4 @@ footer li{
         display: grid;
         grid-template-columns:3fr 1fr 1fr 1fr 1fr 1fr 3fr;
     }
-}
-
-html{
-    touch-action: manipulation;
 }
