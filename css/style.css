@@ -797,7 +797,7 @@ footer li{
         overflow-y:scroll;
     }
 
-    #header-wrapper, #header, #motto, #mission{
+    #motto, #mission{
         display:none;
     }
 }
