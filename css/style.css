@@ -9,21 +9,25 @@ html{
 ul li a, #slide-menu button, footer a{
     text-decoration: none;
     color: #ddd;
+    font-size: -webkit-calc(50% + 0.5vw);
     font-size: calc(50% + 0.5vw);
 }
 
 #slide-menu a{
+    font-size: -webkit-calc(10% + 0.2vh);
     font-size: calc(10% + 0.2vh);
     text-decoration: none;
     color: #ddd;
 }
 
 p, a{
+    font-size: -webkit-calc(75% + 0.5vw);
     font-size: calc(75% + 0.5vw);
     line-height:1.5;
 }
 
 h1{
+    font-size:-webkit-calc(225% + 0.5vw);
     font-size:calc(225% + 0.5vw);
     color:#ddd;
     line-height: 1;
@@ -31,18 +35,21 @@ h1{
 }
 
 h2{
+    font-size:-webkit-calc(150% + 0.5vw);
     font-size:calc(150% + 0.5vw);
     margin: 0 0 0.5em 0;
     font-weight: 500;
 }
 
 h3{
+    font-size: -webkit-calc(120% + 0.5vw);
     font-size: calc(120% + 0.5vw);
     margin: 0 0 0.5em 0;
     font-weight: 500;
 }
 
 footer h4{
+    font-size: -webkit-calc(100% + 0.5vw);
     font-size: calc(100% + 0.5vw);
     margin: 0 0 0.5em 0;
     font-weight: 400;
@@ -65,11 +72,13 @@ footer h4{
 }
 
 .dark-section label{
+    font-size: -webkit-calc(75% + 0.5vw);
     font-size: calc(75% + 0.5vw);
     font-weight: 400;
 }
 
 #mission p{
+    font-size: -webkit-calc(90% + 0.5vw);
     font-size: calc(90% + 0.5vw);
 }
 
@@ -86,10 +95,12 @@ footer h4{
 }
 
 #footer-copyright{
+    font-size: -webkit-calc(50% + 0.5vw);
     font-size: calc(50% + 0.5vw);
 }
 
 footer nav{
+    font-size: -webkit-calc(60% + 0.5vw);
     font-size: calc(60% + 0.5vw);
 }
 
@@ -104,7 +115,8 @@ footer nav{
     left:0;
     background-image: url('../img/bg-img.jpg');
     background-position: top;
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
     background-repeat:no-repeat;
     width:100%;
     height:200vh;
@@ -121,18 +133,30 @@ footer nav{
     top:0;
     left:0;
 
-    transform-origin: top;
+    -webkit-transform-origin: top;
+
+        -ms-transform-origin: top;
+
+            transform-origin: top;
+    -webkit-transition: 0.6s ease;
+    -o-transition: 0.6s ease;
     transition: 0.6s ease;
 }
 
 header{
     position:fixed;
+    display:-ms-grid;
     display:grid;
-    grid-template-columns: 2fr 1fr 2fr;
+    -ms-grid-columns: 2fr 1fr 2fr;
+        grid-template-columns: 2fr 1fr 2fr;
     width: 100%;
     overflow:hidden;
     z-index:5;
-    transform-origin: top;
+    -webkit-transform-origin: top;
+        -ms-transform-origin: top;
+            transform-origin: top;
+    -webkit-transition: 0.6s ease;
+    -o-transition: 0.6s ease;
     transition: 0.6s ease;
 }
 
@@ -159,8 +183,10 @@ header .main-nav ul li a{
 .main-nav ul{
     width:100%;
     height: 100%;
+    display:-ms-grid;
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding:0 5vw 0 0;
     margin: 0;
     z-index:6;
@@ -200,6 +226,8 @@ header .main-nav ul li a{
     top:0;
     right:0;
     z-index: 100;
+    -webkit-transition: ease 0.5s;
+    -o-transition: ease 0.5s;
     transition: ease 0.5s;
     padding: 10vh 0;
 }
@@ -246,8 +274,10 @@ header .main-nav ul li a{
 }
 
 #details{
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 50% 50%;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
     padding: 0vh 15vw 0vh 15vw;
     overflow: hidden;
 }
@@ -297,7 +327,8 @@ header .main-nav ul li a{
 #contact{
     background-image: url('../img/bg-img.jpg');
     background-position: top;
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
     background-repeat:no-repeat;
 }
 
@@ -320,8 +351,10 @@ footer ul{
     list-style-type: none;
     margin:0;
     padding:1vh 0 0 0;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 footer li{
@@ -389,6 +422,7 @@ footer li{
 #orng-hor-line{
     position:absolute;
     top:15vh;
+    left:-webkit-calc(30% + 32px);
     left:calc(30% + 32px);
 
     width: 45%;
@@ -400,7 +434,9 @@ footer li{
 
 #blck-hor-line{
     position:absolute;
+    top:-webkit-calc(15vh + 8px);
     top:calc(15vh + 8px);
+    left:-webkit-calc(30% + 32px);
     left:calc(30% + 32px);
 
     width: 45%;
@@ -413,6 +449,7 @@ footer li{
 #square1{
     position:absolute;
     top: 15vh;
+    left:-webkit-calc(30% + 13px);
     left:calc(30% + 13px);
 
     width: 8px;
@@ -423,7 +460,9 @@ footer li{
 
 #square2{
     position:absolute;
+    top: -webkit-calc(15vh + 8px);
     top: calc(15vh + 8px);
+    left:-webkit-calc(30% + 21px);
     left:calc(30% + 21px);
 
     width: 11px;
@@ -476,6 +515,7 @@ footer li{
     height:100%;
     height:0;
     position:absolute;
+    top:-webkit-calc(30vh + 8px);
     top:calc(30vh + 8px);
     left:30%;
 
@@ -499,6 +539,7 @@ footer li{
 
 #blck-hor-line2{
     position:absolute;
+    top:-webkit-calc(30vh + 8px);
     top:calc(30vh + 8px);
     right:0;
     margin-right:-25vw;
@@ -514,6 +555,7 @@ footer li{
 #square3{
     position:absolute;
     top: 30vh;
+    left:-webkit-calc(30% + 11px);
     left:calc(30% + 11px);
 
     width: 8px;
@@ -524,7 +566,9 @@ footer li{
 
 #square4{
     position:absolute;
+    top: -webkit-calc(30vh + 8px);
     top: calc(30vh + 8px);
+    left:-webkit-calc(30%);
     left:calc(30%);
 
     width: 11px;
@@ -574,6 +618,7 @@ footer li{
     height:100%;
     height:0;
     position:absolute;
+    top:-webkit-calc(5vh + 8px);
     top:calc(5vh + 8px);
     left:30%;
 
@@ -597,6 +642,7 @@ footer li{
 
 #blck-hor-line3{
     position:absolute;
+    top:-webkit-calc(5vh + 8px);
     top:calc(5vh + 8px);
     left:0;
     margin-left:-25vw;
@@ -612,6 +658,7 @@ footer li{
 #square5{
     position:absolute;
     top: 35vh;
+    left:-webkit-calc(30% + 13px);
     left:calc(30% + 13px);
 
     width: 8px;
@@ -622,7 +669,9 @@ footer li{
 
 #square6{
     position:absolute;
+    top: -webkit-calc(5vh + 8px);
     top: calc(5vh + 8px);
+    left:-webkit-calc(30% + 21px);
     left:calc(30% + 21px);
 
     width: 11px;
@@ -634,6 +683,7 @@ footer li{
 #orng-hor-line4{
     position:absolute;
     top:35vh;
+    left:-webkit-calc(30% + 32px);
     left:calc(30% + 32px);
 
     width: 45%;
@@ -645,7 +695,9 @@ footer li{
 
 #blck-hor-line4{
     position:absolute;
+    top:-webkit-calc(35vh + 8px);
     top:calc(35vh + 8px);
+    left:-webkit-calc(30% + 32px);
     left:calc(30% + 32px);
 
     width: 45%;
@@ -657,7 +709,9 @@ footer li{
 
 #square7{
     position:absolute;
+    top: -webkit-calc(35vh + 8px);
     top: calc(35vh + 8px);
+    left:-webkit-calc(30% + 21px);
     left:calc(30% + 21px);
 
     width: 11px;
@@ -692,11 +746,13 @@ footer li{
 
     #mission{
         padding:5vh 20vw 10vh 20vw;
-        grid-template-columns: 1fr 1fr 1fr;
+        -ms-grid-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
     }
 
     #details{
-    grid-template-columns: 1fr 3fr 1fr;
+    -ms-grid-columns: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 3fr 1fr;
     }
     
     #details span{
@@ -731,8 +787,10 @@ footer li{
         list-style-type: none;
         margin:0;
         padding:1vh 0;
+        display: -ms-grid;
         display: grid;
-        grid-template-columns: 0 1fr 1fr 1fr 1fr 1fr 0;
+        -ms-grid-columns: 0 1fr 1fr 1fr 1fr 1fr 0;
+            grid-template-columns: 0 1fr 1fr 1fr 1fr 1fr 0;
     }
     
     #page{
@@ -756,7 +814,9 @@ footer li{
         list-style-type: none;
         margin:0;
         padding:1vh 0;
+        display: -ms-grid;
         display: grid;
-        grid-template-columns:3fr 1fr 1fr 1fr 1fr 1fr 3fr;
+        -ms-grid-columns:3fr 1fr 1fr 1fr 1fr 1fr 3fr;
+            grid-template-columns:3fr 1fr 1fr 1fr 1fr 1fr 3fr;
     }
 }
