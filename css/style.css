@@ -796,6 +796,10 @@ footer li{
     html{
         overflow-y:scroll;
     }
+
+    #header-wrapper, #header{
+        display:none;
+    }
 }
 
 @media(min-width: 1440px){
