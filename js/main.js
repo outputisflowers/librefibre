@@ -1,15 +1,15 @@
-window.addEventListener('scroll', topGraphicAppear);
-window.addEventListener('touchmove', topGraphicAppear);
+window.addEventListener('scroll', topGraphicAppear, false);
+window.addEventListener('touchmove', topGraphicAppear, false);
 
-window.addEventListener('scroll', leftGraphicAppear);
-window.addEventListener('touchmove', leftGraphicAppear);
+window.addEventListener('scroll', leftGraphicAppear, false);
+window.addEventListener('touchmove', leftGraphicAppear, false);
 
-window.addEventListener('scroll', rightGraphicAppear);
-window.addEventListener('touchmove', rightGraphicAppear);
+window.addEventListener('scroll', rightGraphicAppear, false);
+window.addEventListener('touchmove', rightGraphicAppear, false);
 
-window.addEventListener('scroll', solidHeader);
-window.addEventListener('touchmove', solidHeader);
-window.addEventListener('mousemove', solidHeader);
+window.addEventListener('scroll', solidHeader, false);
+window.addEventListener('touchmove', solidHeader, false);
+window.addEventListener('mousemove', solidHeader, false);
 
 
 var slideMenuAnchor = document.getElementById('slide-menu').querySelectorAll('a');
@@ -21,6 +21,8 @@ slideMenuAnchor[4].addEventListener('click', closeSlideMenu);
 
 
 function topGraphicAppear(e){
+    
+    e.preventDefault();
     var topDivHeight = 0;
 
     var scrollAmount = document.getElementsByTagName('html')[0].scrollTop;
@@ -53,11 +55,11 @@ function topGraphicAppear(e){
         blckHorLine.style.width = 'calc(' + topDivHeight + 'px + 15px)';
         orngHorLine.style.width = topDivHeight + 'px';
     };
-
-    e.preventDefault();
 };
 
 function leftGraphicAppear(e){
+    
+    e.preventDefault();
     var topDivHeight = 0;
 
     var scrollAmount = document.getElementsByTagName('html')[0].scrollTop;
@@ -103,11 +105,12 @@ function leftGraphicAppear(e){
         blckHorLine4.style.width = 0;
         orngHorLine4.style.width = 0;
     }
-
-    e.preventDefault();
 };
 
 function rightGraphicAppear(e){
+    
+    e.preventDefault();
+
     var topDivHeight = 0;
 
     var scrollAmount = document.getElementsByTagName('html')[0].scrollTop;
@@ -140,11 +143,10 @@ function rightGraphicAppear(e){
         blckHorLine2.style.width = 'calc(' + rightDivHeight + 'px + 15px)';
         orngHorLine2.style.width = rightDivHeight + 'px';
     };
-
-    e.preventDefault();
 };
 
-function solidHeader(){
+function solidHeader(e){
+    e.preventDefault();
     // var headerHeight = document.getElementsByTagName('header').style.height;
     var headerStyle = document.getElementsByTagName('header')[0].style;
     var scrolled = document.getElementsByTagName('html')[0].scrollTop;

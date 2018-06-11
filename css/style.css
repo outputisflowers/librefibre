@@ -108,6 +108,8 @@ footer nav{
     background-repeat:no-repeat;
     width:100%;
     height:200vh;
+    overflow-y:scroll;
+    z-index:-1
 }
 
 #header-wrapper{
@@ -144,7 +146,7 @@ header .main-nav ul li a{
     width: 100%;
     text-align: center;
     position: relative;
-    z-index: 1;
+    z-index: 6;
 }
 
 #logo img{
@@ -161,6 +163,7 @@ header .main-nav ul li a{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding:0 5vw 0 0;
     margin: 0;
+    z-index:6;
 }
 
 .main-nav ul li{
@@ -732,11 +735,11 @@ footer li{
         grid-template-columns: 0 1fr 1fr 1fr 1fr 1fr 0;
     }
 
-    html, body, #page, #mission, #motto, section, #contact{
+    /* html, body, #page, #mission, #motto, section, #contact{
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
         touch-action: none;
-    }
+    } */
 }
 
 @media(min-width: 1440px){
