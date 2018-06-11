@@ -1,15 +1,15 @@
-window.addEventListener('scroll', topGraphicAppear, false);
-window.addEventListener('touchmove', topGraphicAppear, false);
+document.body.addEventListener('scroll', topGraphicAppear, false);
+document.body.addEventListener('touchmove', topGraphicAppear, false);
 
-window.addEventListener('scroll', leftGraphicAppear, false);
-window.addEventListener('touchmove', leftGraphicAppear, false);
+document.body.addEventListener('scroll', leftGraphicAppear, false);
+document.body.addEventListener('touchmove', leftGraphicAppear, false);
 
-window.addEventListener('scroll', rightGraphicAppear, false);
-window.addEventListener('touchmove', rightGraphicAppear, false);
+document.body.addEventListener('scroll', rightGraphicAppear, false);
+document.body.addEventListener('touchmove', rightGraphicAppear, false);
 
-window.addEventListener('scroll', solidHeader, false);
-window.addEventListener('touchmove', solidHeader, false);
-window.addEventListener('mousemove', solidHeader, false);
+document.body.addEventListener('scroll', solidHeader, false);
+document.body.addEventListener('touchmove', solidHeader, false);
+document.body.addEventListener('mousemove', solidHeader, false);
 
 
 var slideMenuAnchor = document.getElementById('slide-menu').querySelectorAll('a');
