@@ -19,7 +19,7 @@ slideMenuAnchor[1].addEventListener('click', closeSlideMenu);
 slideMenuAnchor[2].addEventListener('click', closeSlideMenu);
 slideMenuAnchor[3].addEventListener('click', closeSlideMenu);
 slideMenuAnchor[4].addEventListener('click', closeSlideMenu);
-document.querySelector('html').addEventListener('click', closeSlideMenu)
+document.querySelector('html').addEventListener('click', closeSlideMenu);
 
 
 function topGraphicAppear(e){
@@ -168,6 +168,7 @@ function solidHeader(e){
     headerStyle.transform = 'scale(0.9)';
     headerWrapper.transform = 'scaleY(0.8)'; 
     headerWrapper.backgroundColor = '#ddd';
+    headerWrapper.opacity = '0.9';
     headerWrapper.shadowBox = 'black';
     navItems = document.querySelector('nav').querySelector('ul').querySelectorAll('li');
 
