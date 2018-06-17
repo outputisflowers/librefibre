@@ -104,13 +104,13 @@ function leftGraphicAppear(e){
 
         blckHorLine4.style.width = 'calc(' + leftDivHeight + 'px - 75vh)';
         orngHorLine4.style.width = 'calc(' + leftDivHeight + 'px' + ' - ' + '75vh + 25px)';
-    };
+    }
 
     if(leftDivHeight < 100){
         blckHorLine4.style.width = 0;
         orngHorLine4.style.width = 0;
     }
-};
+}
 
 function rightGraphicAppear(e){
     
@@ -149,8 +149,8 @@ function rightGraphicAppear(e){
     
         blckHorLine2.style.width = 'calc(' + rightDivHeight + 'px + 15px)';
         orngHorLine2.style.width = rightDivHeight + 'px';
-    };
-};
+    }
+}
 
 function solidHeader(e){
     e.preventDefault();
@@ -173,18 +173,18 @@ function solidHeader(e){
 
         for(i=0; i < navItems.length; i++){
         navItems[i].querySelector('a').style.color = '#333';
-        };
+        }
         for(i=0; i < hamburgerLines.length; i++){
             hamburgerLines[i].style.stroke = '#333';
         }
 
-    };
+    }
 
     if(scrolled < upperPageHeight/3){
         headerStyle.backgroundColor = 'transparent';
         headerStyle.transform = 'scale(1)';
         headerWrapper.backgroundColor = 'transparent';
-        headerWrapper.transform = 'scale(1)'
+        headerWrapper.transform = 'scale(1)';
         navItems = document.querySelector('nav').querySelector('ul').querySelectorAll('li');
         hamburgerLines = document.getElementById('hamburger').querySelectorAll('path');
         for(i=0; i < navItems.length; i++){
@@ -193,20 +193,20 @@ function solidHeader(e){
         for(i=0; i < hamburgerLines.length; i++){
             hamburgerLines[i].style.stroke = '#ddd';
         }
-    };
+    }
 
 
-};
+}
 
 function openSlideMenu(){
     document.getElementById('slide-menu').style.width = '70vw';
     document.getElementById('slide-menu').style.padding = '10vh 5vh';
-};
+}
 
 function closeSlideMenu(){
     document.getElementById('slide-menu').style.width = '0vw';
     document.getElementById('slide-menu').style.padding = '10vh 0';
-};
+}
 
     // // Tests if it's IE and uses querySelector instead of getElementByTagName
     // if (/MSIE 10/i.test(navigator.userAgent | /MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent) ) | /Edge\/\d./i.test(navigator.userAgent)) {
