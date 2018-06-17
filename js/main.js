@@ -168,7 +168,8 @@ function solidHeader(e){
     headerStyle.transform = 'scale(0.9)';
     headerWrapper.transform = 'scaleY(0.8)'; 
     headerWrapper.backgroundColor = '#ddd';
-    headerWrapper.opacity = '0.9';
+    headerWrapper.opacity = '0.1';
+    console.log(headerWrapper.opacity)
     headerWrapper.shadowBox = 'black';
     navItems = document.querySelector('nav').querySelector('ul').querySelectorAll('li');
     hamburgerLines = document.getElementById('hamburger').querySelectorAll('path');
