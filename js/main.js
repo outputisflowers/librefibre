@@ -1,15 +1,16 @@
-document.body.addEventListener('scroll', topGraphicAppear, false);
-document.body.addEventListener('touchmove', topGraphicAppear, false);
 
-document.body.addEventListener('scroll', leftGraphicAppear, false);
-document.body.addEventListener('touchmove', leftGraphicAppear, false);
+window.addEventListener('scroll', topGraphicAppear, false);
+window.addEventListener('touchmove', topGraphicAppear, false);
 
-document.body.addEventListener('scroll', rightGraphicAppear, false);
-document.body.addEventListener('touchmove', rightGraphicAppear, false);
+window.addEventListener('scroll', leftGraphicAppear, false);
+window.addEventListener('touchmove', leftGraphicAppear, false);
 
-document.body.addEventListener('scroll', solidHeader, false);
-document.body.addEventListener('touchmove', solidHeader, false);
-document.body.addEventListener('mousemove', solidHeader, false);
+window.addEventListener('scroll', rightGraphicAppear, false);
+window.addEventListener('touchmove', rightGraphicAppear, false);
+
+window.addEventListener('scroll', solidHeader, false);
+window.addEventListener('touchmove', solidHeader, false);
+window.addEventListener('mousemove', solidHeader, false);
 
 
 var slideMenuAnchor = document.getElementById('slide-menu').querySelectorAll('a');
@@ -25,7 +26,10 @@ function topGraphicAppear(e){
     e.preventDefault();
     var topDivHeight = 0;
 
-    var scrollAmount = document.getElementsByTagName('html')[0].scrollTop;
+    var scrollAmountMoz = document.getElementsByTagName('html')[0].scrollTop;
+    var scrollAmountIE = document.querySelector('body').scrollTop;
+    var scrollAmount = scrollAmountIE + scrollAmountMoz;
+
   
     var motto = document.getElementById('motto');
     var mission = document.getElementById('mission');
@@ -62,8 +66,10 @@ function leftGraphicAppear(e){
     e.preventDefault();
     var topDivHeight = 0;
 
-    var scrollAmount = document.getElementsByTagName('html')[0].scrollTop;
-  
+    var scrollAmountMoz = document.getElementsByTagName('html')[0].scrollTop;
+    var scrollAmountIE = document.querySelector('body').scrollTop;
+    var scrollAmount = scrollAmountIE + scrollAmountMoz;
+
     var motto = document.getElementById('motto');
     var mission = document.getElementById('mission');
     var upperPageSize = (motto.clientHeight + mission.clientHeight);
@@ -113,7 +119,9 @@ function rightGraphicAppear(e){
 
     var topDivHeight = 0;
 
-    var scrollAmount = document.getElementsByTagName('html')[0].scrollTop;
+    var scrollAmountMoz = document.getElementsByTagName('html')[0].scrollTop;
+    var scrollAmountIE = document.querySelector('body').scrollTop;
+    var scrollAmount = scrollAmountIE + scrollAmountMoz;
   
     var motto = document.getElementById('motto');
     var mission = document.getElementById('mission');
@@ -149,27 +157,28 @@ function solidHeader(e){
     e.preventDefault();
     // var headerHeight = document.getElementsByTagName('header').style.height;
     var headerStyle = document.getElementsByTagName('header')[0].style;
-    var scrolled = document.getElementsByTagName('html')[0].scrollTop;
+    var scrollAmountMoz = document.getElementsByTagName('html')[0].scrollTop;
+    var scrollAmountIE = document.querySelector('body').scrollTop;
+    var scrolled = scrollAmountIE + scrollAmountMoz;
     var mottoHeight = document.getElementById('motto').clientHeight;
     var missionHeight = document.getElementById('mission').clientHeight;
     var upperPageHeight = mottoHeight + missionHeight;
     var headerWrapper = document.getElementById('header-wrapper').style;
-    var navColor = document.getElementById('header').getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
-    var hamburgerColor = document.querySelectorAll('path');
 
     if(scrolled > upperPageHeight/3){
     headerStyle.transform = 'scale(0.9)';
     headerWrapper.transform = 'scaleY(0.8)'; 
     headerWrapper.backgroundColor = '#ddd';
-    headerWrapper.shadowBox = 'black'
+    headerWrapper.shadowBox = 'black';
+    navItems = document.querySelector('nav').querySelector('ul').querySelectorAll('li');
 
-        for(i=0; i<navColor.length; i++){
-            navColor[i].getElementsByTagName('a')[0].style.color = '#333';
+        for(i=0; i < navItems.length; i++){
+        navItems[i].querySelector('a').style.color = '#333';
         };
+        for(i=0; i < hamburgerLines.length; i++){
+            hamburgerLines[i].style.stroke = '#333';
+        }
 
-        for(i=0; i<hamburgerColor.length; i++){
-            hamburgerColor[i].attributes[1].nodeValue = '#333';
-        };
     };
 
     if(scrolled < upperPageHeight/3){
@@ -177,19 +186,21 @@ function solidHeader(e){
         headerStyle.transform = 'scale(1)';
         headerWrapper.backgroundColor = 'transparent';
         headerWrapper.transform = 'scale(1)'
-
-        for(i=0; i<navColor.length; i++){
-            navColor[i].getElementsByTagName('a')[0].style.color = '#ddd';
-        };
-
-        for(i=0; i<hamburgerColor.length; i++){
-            hamburgerColor[i].attributes[1].nodeValue = '#ddd';
-        };
+        navItems = document.querySelector('nav').querySelector('ul').querySelectorAll('li');
+        hamburgerLines = document.getElementById('hamburger').querySelectorAll('path');
+        for(i=0; i < navItems.length; i++){
+            navItems[i].querySelector('a').style.color = '#ddd';
+        }
+        for(i=0; i < hamburgerLines.length; i++){
+            hamburgerLines[i].style.stroke = '#ddd';
+        }
     };
+
+
 };
 
 function openSlideMenu(){
-    document.getElementById('slide-menu').style.width = '40vw';
+    document.getElementById('slide-menu').style.width = '70vw';
     document.getElementById('slide-menu').style.padding = '10vh 5vh';
 };
 
@@ -198,4 +209,7 @@ function closeSlideMenu(){
     document.getElementById('slide-menu').style.padding = '10vh 0';
 };
 
+    // // Tests if it's IE and uses querySelector instead of getElementByTagName
+    // if (/MSIE 10/i.test(navigator.userAgent | /MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent) ) | /Edge\/\d./i.test(navigator.userAgent)) {
 
+    // }
