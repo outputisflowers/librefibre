@@ -171,6 +171,7 @@ function solidHeader(e){
     headerWrapper.opacity = '0.9';
     headerWrapper.shadowBox = 'black';
     navItems = document.querySelector('nav').querySelector('ul').querySelectorAll('li');
+    hamburgerLines = document.getElementById('hamburger').querySelectorAll('path');
 
         for(i=0; i < navItems.length; i++){
         navItems[i].querySelector('a').style.color = '#333';
