@@ -19,12 +19,12 @@ slideMenuAnchor[1].addEventListener('click', closeSlideMenu);
 slideMenuAnchor[2].addEventListener('click', closeSlideMenu);
 slideMenuAnchor[3].addEventListener('click', closeSlideMenu);
 slideMenuAnchor[4].addEventListener('click', closeSlideMenu);
+document.querySelector('html').addEventListener('click', closeSlideMenu)
 
 
 function topGraphicAppear(e){
     
     e.preventDefault();
-    var topDivHeight = 0;
 
     var scrollAmountMoz = document.getElementsByTagName('html')[0].scrollTop;
     var scrollAmountIE = document.querySelector('body').scrollTop;
@@ -58,13 +58,12 @@ function topGraphicAppear(e){
     
         blckHorLine.style.width = 'calc(' + topDivHeight + 'px + 15px)';
         orngHorLine.style.width = topDivHeight + 'px';
-    };
-};
+    }
+}
 
 function leftGraphicAppear(e){
     
     e.preventDefault();
-    var topDivHeight = 0;
 
     var scrollAmountMoz = document.getElementsByTagName('html')[0].scrollTop;
     var scrollAmountIE = document.querySelector('body').scrollTop;
